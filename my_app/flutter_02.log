@@ -1,0 +1,85 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+UnsupportedError: Unsupported operation: Cannot extract a file path from a packge URI
+
+```
+#0      _SimpleUri.toFilePath (dart:core/uri.dart:4561)
+#1      DartDependencySetBuilder.build (package:flutter_tools/src/dart/dependencies.dart:91)
+#2      HotRunner._refreshDartDependencies (package:flutter_tools/src/run_hot.dart:85)
+#3      HotRunner.run (package:flutter_tools/src/run_hot.dart:208)
+<asynchronous suspension>
+#4      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:345)
+<asynchronous suspension>
+#5      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:290)
+<asynchronous suspension>
+#6      FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:228)
+<asynchronous suspension>
+#7      CommandRunner.runCommand (package:args/command_runner.dart:194)
+<asynchronous suspension>
+#8      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:286)
+<asynchronous suspension>
+#9      CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:109)
+#10     new Future.sync (dart:async/future.dart:222)
+#11     CommandRunner.run (package:args/command_runner.dart:109)
+#12     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:166)
+#13     run.<anonymous closure> (package:flutter_tools/runner.dart:90)
+<asynchronous suspension>
+#14     AppContext._run (package:flutter_tools/src/base/context.dart:76)
+<asynchronous suspension>
+#15     AppContext.runInZone.<anonymous closure> (package:flutter_tools/src/base/context.dart:66)
+#16     _rootRun (dart:async/zone.dart:1126)
+#17     _CustomZone.run (dart:async/zone.dart:1023)
+#18     runZoned (dart:async/zone.dart:1501)
+#19     AppContext.runInZone (package:flutter_tools/src/base/context.dart:65)
+#20     run (package:flutter_tools/runner.dart:61)
+<asynchronous suspension>
+#21     main (package:flutter_tools/executable.dart:48)
+<asynchronous suspension>
+#22     main (file:///DRIVE_D/flutter/packages/flutter_tools/bin/flutter_tools.dart:16)
+#23     _startIsolate.<anonymous closure> (dart:isolate-patch/dart:isolate/isolate_patch.dart:277)
+#24     _RawReceivePortImpl._handleMessage (dart:isolate-patch/dart:isolate/isolate_patch.dart:165)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel dev, v0.1.5, on Mac OS X 10.13.3 17D102, locale en-US)
+    • Flutter version 0.1.5 at /DRIVE_D/flutter
+    • Framework revision 3ea4d06340 (2 days ago), 2018-02-22 11:12:39 -0800
+    • Engine revision ead227f118
+    • Dart version 2.0.0-dev.28.0.flutter-0b4f01f759
+
+[✓] Android toolchain - develop for Android devices (Android SDK 27.0.1)
+    • Android SDK at /DRIVE_D/Android/Sdk
+    • Android NDK at /DRIVE_D/Android/Sdk/ndk-bundle
+    • Platform android-27, build-tools 27.0.1
+    • ANDROID_HOME = /DRIVE_D/Android/Sdk
+    • Java binary at: /Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/bin/java
+    • Java version Java(TM) SE Runtime Environment (build 1.8.0_152-b16)
+
+[✓] iOS toolchain - develop for iOS devices (Xcode 9.2)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 9.2, Build version 9C40b
+    • ios-deploy 1.9.2
+    • CocoaPods version 1.4.0
+
+[!] Android Studio
+    • Android Studio at DRIVE_D/Android Studio.app/Contents
+    ✗ Android Studio not found at DRIVE_D/Android Studio.app/Contents
+    • Try updating or re-installing Android Studio.
+
+[✓] VS Code (version 1.20.1)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Dart Code extension version 2.9.0
+
+[✓] Connected devices (1 available)
+    • PREVIEW, Google Pixel, 8 0, API 26, 1080x1920 • 192.168.56.101:5555 • android-x86 • Android 8.0.0 (API 26)
+
+! Doctor found issues in 1 category.
+```
